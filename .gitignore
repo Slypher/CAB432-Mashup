@@ -1,3 +1,6 @@
 # Folders
 node_modules
 vscode
+
+# Should I include my API Keys...?
+# auth.json
