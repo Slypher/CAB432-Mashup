@@ -2,5 +2,5 @@
 node_modules
 vscode
 
-# Should I include my API Keys...?
+# API Keys
 auth.json
