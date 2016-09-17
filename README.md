@@ -1,5 +1,5 @@
 # CAB432-Mashup
-Cloud Computing - Assignment 1
+This mashup was made for the Cloud Computing unit
 
 ## How to use
 1. `git clone https://github.com/Slypher/CAB432-Mashup.git`
@@ -13,7 +13,8 @@ Cloud Computing - Assignment 1
 - `@FOR /f "tokens=*" %i IN ('docker-machine.exe env --shell cmd') DO @%i`
 
 ## auth.json Format
-```{
+
+    {
     "igdb" : {
         "endpoint" : "https://igdbcom-internet-game-database-v1.p.mashape.com/",
         "key": {
@@ -31,7 +32,7 @@ Cloud Computing - Assignment 1
         "endpoint": "http://api.steampowered.com/",
         "key": "key_here"
     }
-}```
+    }
 
 # Credits
 https://nodejs.org/en/docs/guides/nodejs-docker-webapp/
