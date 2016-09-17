@@ -15,23 +15,23 @@ This mashup was made for the Cloud Computing unit
 ## auth.json Format
 
     {
-    "igdb" : {
-        "endpoint" : "https://igdbcom-internet-game-database-v1.p.mashape.com/",
-        "key": {
-            "testing": "key_here",
-            "production": "key_here"
+        "igdb" : {
+            "endpoint" : "https://igdbcom-internet-game-database-v1.p.mashape.com/",
+            "key": {
+                "testing": "key_here",
+                "production": "key_here"
+            }
+        },
+
+        "giantbomb": {
+            "endpoint": "http://www.giantbomb.com/api/",
+            "key": "key_here"
+        },
+
+        "steamweb": {
+            "endpoint": "http://api.steampowered.com/",
+            "key": "key_here"
         }
-    },
-
-    "giantbomb": {
-        "endpoint": "http://www.giantbomb.com/api/",
-        "key": "key_here"
-    },
-
-    "steamweb": {
-        "endpoint": "http://api.steampowered.com/",
-        "key": "key_here"
-    }
     }
 
 # Credits
