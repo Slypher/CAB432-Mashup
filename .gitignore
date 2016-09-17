@@ -1,6 +1,6 @@
 # Folders
 node_modules
-vscode
+.vscode
 
 # API Keys
 auth.json

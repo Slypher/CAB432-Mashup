@@ -12,7 +12,7 @@ app.use(morgan('\x1b[90m:date[web] \x1b[92m:remote-addr \x1b[90m:method :url \x1
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json()); // get information from HTML forms
 app.use(express.static('public')); // make public folder available to app
-//app.use(favicon(__dirname + '/public/images/favicon.ico')); // app icon
+app.use(favicon(__dirname + '/public/images/favicon.ico')); // app icon
 
 app.set('view engine', 'ejs'); // set up ejs for templating
  
