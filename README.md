@@ -12,5 +12,35 @@ Cloud Computing - Assignment 1
 - `docker rm -f $(docker ps -a -q)`
 - `@FOR /f "tokens=*" %i IN ('docker-machine.exe env --shell cmd') DO @%i`
 
+## auth.json Format
+```{
+    "igdb" : {
+        "endpoint" : "https://igdbcom-internet-game-database-v1.p.mashape.com/",
+        "key": {
+            "testing": "key_here",
+            "production": "key_here"
+        }
+    },
+
+    "giantbomb": {
+        "endpoint": "http://www.giantbomb.com/api/",
+        "key": "key_here"
+    },
+
+    "steamweb": {
+        "endpoint": "http://api.steampowered.com/",
+        "key": "key_here"
+    }
+}```
+
 # Credits
 https://nodejs.org/en/docs/guides/nodejs-docker-webapp/
+
+
+http://www.giantbomb.com/api
+http://www.igdb.com/api
+https://steamcommunity.com/dev
+
+
+http://getbootstrap.com/
+http://fontawesome.io/
