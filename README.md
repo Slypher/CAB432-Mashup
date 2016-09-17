@@ -38,10 +38,10 @@ This mashup was made for the Cloud Computing unit
 https://nodejs.org/en/docs/guides/nodejs-docker-webapp/
 
 
-http://www.giantbomb.com/api
-http://www.igdb.com/api
-https://steamcommunity.com/dev
+http://www.giantbomb.com/api  
+http://www.igdb.com/api  
+https://steamcommunity.com/dev  
 
 
-http://getbootstrap.com/
+http://getbootstrap.com/  
 http://fontawesome.io/
