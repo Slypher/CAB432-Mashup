@@ -1,14 +1,15 @@
 <div class='well media'>
     <div class='media-left'>
-        <img class='media-object' src='<% if (typeof games[i].cover.cloudinary_id !== "undefined") { %>
+        <img class='media-object' href='games[i].url' src='
+        <% if (typeof games[i].cover !== "undefined") { %>
             https://res.cloudinary.com/igdb/image/upload/t_thumb/<%= games[i].cover.cloudinary_id %>
         <% } %>
         '></img>
     </div>
     <div class='media-body'>
         <h4 class='media-heading'><%=games[i].name%></h4>
-        <% if (typeof games[i].summary !== 'undefined') { %>
-            <%=games[i].summary%>
+        <% if (typeof games[i].deck !== 'undefined') { %>
+            <%=reviews[i][0].deck%>
         <% } %>
     </div>
 </div>
