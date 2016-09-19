@@ -3,6 +3,7 @@
 
 <head>
     <% include header %>
+    <script src='/assets/js/increment_offset.js' type='text/javascript'></script>
 </head>
 
 <body>
@@ -14,15 +15,15 @@
         </div>
 
         <div class='col-sm-10 col-sm-offset-1' style='border-radius: 100px;'>
-            <div class='well'>
-                <% include searchbar %>
-                
-            </div>
             <% if (typeof games != 'undefined') { %>
                 <% for (var i = 0; i < games.length; i++) { %>
                     <% include game_template %>
                 <% } %>
             <% } %>
+
+            <div class='text-center'>
+                <button onclick='increment_offset()' class='btn btn-lg btn-primary'>Next</button>
+            </div>
         </div>
     </div>
 </body>

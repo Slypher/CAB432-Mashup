@@ -4,7 +4,6 @@ const http = require('http');
 
 module.exports = function (app) {
 
-    //app.get('/', require('./routes/index.js'));
+    app.get('/', require('./routes/index.js'));
     app.get('/about', require('./routes/about.js'));
-    app.get('/search', require('./routes/search.js'));
 };

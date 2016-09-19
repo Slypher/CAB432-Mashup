@@ -2,14 +2,47 @@
     <div class='media-left'>
         <img class='media-object' href='games[i].url' src='
         <% if (typeof games[i].cover !== "undefined") { %>
-            https://res.cloudinary.com/igdb/image/upload/t_thumb/<%= games[i].cover.cloudinary_id %>
+            https://res.cloudinary.com/igdb/image/upload/t_logo_med/<%= games[i].cover.cloudinary_id %>
         <% } %>
         '></img>
+        <br>
+        <% if (game_details[i].appid === 'none') { %>
+            <a href='#' class='btn' disabled>No page found</a>
+        <% } else { %>
+            <a href='http://store.steampowered.com/app/<%= game_details[i].appid %>/' class='btn btn-info'>Steam Store</a>
+        <% } %>
     </div>
     <div class='media-body'>
-        <h4 class='media-heading'><%=games[i].name%></h4>
-        <% if (typeof games[i].deck !== 'undefined') { %>
-            <%=reviews[i][0].deck%>
+        <h3 class='media-heading'><%=games[i].name%></h3>
+        <% if (typeof game_details[i].deck !== 'undefined') { %>
+            <p>
+                <strong>Rating:</strong> <%=games[i].rating%>
+                <br>
+                <strong>Rating Count:</strong> <%=games[i].rating_count%>
+                <br><br>
+                <%=game_details[i].deck%>
+            </p>
         <% } %>
+    </div>
+    <div class='media-right'>
+        <div class="panel panel-default">
+            <div class="panel-heading">User Reviews</div>
+            <div class="panel-body">
+                <% for (var j = 0; j < reviews[i].length; j++) { %>
+                    <% if (typeof reviews[i][j].reviewer !== 'undefined') { %>
+                        <strong><%= reviews[i][j].reviewer %></strong>
+                        <% for (var k = 0; k < reviews[i][j].score; k++) { %>
+                            <span class="fa fa-star"></span>
+                        <% } %>
+                        <% for (var k = reviews[i][j].score; k < 5; k++) { %>
+                            <span class="fa fa-star-o"></span>
+                        <% } %>
+                        <br>
+                    <% } %>
+                    <%= reviews[i][j].deck %>
+                    <hr>
+                <% } %>
+            </div>
+        </div>
     </div>
 </div>

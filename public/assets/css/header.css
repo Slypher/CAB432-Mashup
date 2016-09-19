@@ -1,6 +1,7 @@
 body {
     padding-top: 120px;
     word-wrap: break-word;
+    padding-bottom: 40px;
 }
 
 .navbar .divider-vertical {
@@ -23,7 +24,8 @@ body {
     padding: 10px;
 }
 
-.media-object {
-    height: 90px;
-    width: 90px;
+.panel-body {
+    width:240px;
+    height:120px;
+    overflow-y: scroll;
 }
