@@ -132,15 +132,14 @@ function search_reviews(req, res, options, game_details, callback) { // midway f
 function search_steam(req, res, options, game_details, review, callback) { // midway function: level 5
     function return_result(result) { // callback which links to the next level of the chain
         var appid = 'none';
-
-        for (var i = 0; i < result['applist']['apps'].length; i++) {
-            if (result['applist']['apps'][i].name === game_details.name) appid = result['applist']['apps'][i]['appid'];
+        for (var i = 0; i < result['applist']['apps']['app'].length; i++) {
+            if (result['applist']['apps']['app'][i].name === game_details.name) appid = result['applist']['apps']['app'][i]['appid'];
         }
 
         game_details.appid = appid;
         callback.process(game_details, review, callback.id) // return back to level 2
     }
-    var url = auth.steamweb.endpoint + 'ISteamApps/GetAppList/v2/?format=\'json\''
+    var url = auth.steamweb.endpoint + 'ISteamApps/GetAppList/v00001/?format=\'json\''
     get_request(url, return_result);
 }
 
