@@ -92,7 +92,6 @@ function search_games_gb(req, res, options, results) { // midway function: level
         }
 
         return_results[i] = function (result, id) { // callback which links to the next level of the chain
-            console.log(return_reviews);
             search_game(req, res, options, result.results, return_reviews[id]) // next level
         }
 
