@@ -1,5 +1,5 @@
 # CAB432-Mashup
-This mashup was made for the Cloud Computing unit
+Three APIs mashed into a web application in a docker container
 
 ## How to use
 1. `git clone https://github.com/Slypher/CAB432-Mashup.git`
